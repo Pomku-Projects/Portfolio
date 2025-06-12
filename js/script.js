@@ -17,3 +17,15 @@ if (uploadForm && uploadStatus) {
     }, 1000);
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".carousel");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        carousel.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(carousel);
+});
