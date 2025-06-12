@@ -1,0 +1,60 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, rgba(30,30,30,0.85), rgba(50,50,50,0.85)), url('../assets/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  transition: width 0.3s ease;
+}
+.sidebar.collapsed {
+  width: 60px;
+}
+.toggle-btn {
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+.menu a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+main {
+  margin-left: 260px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+.sidebar.collapsed ~ main {
+  margin-left: 80px;
+}
+.carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.carousel img {
+  height: 200px;
+  border-radius: 8px;
+}
+.admin-panel {
+  background: rgba(255,255,255,0.05);
+  padding: 2em;
+  border-radius: 10px;
+}
