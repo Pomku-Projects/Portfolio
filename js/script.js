@@ -17,6 +17,10 @@ if (uploadForm && uploadStatus) {
     }, 1000);
   });
 }
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('collapsed');
+}
 document.addEventListener("DOMContentLoaded", () => {
   const carousel = document.querySelector(".carousel");
 
