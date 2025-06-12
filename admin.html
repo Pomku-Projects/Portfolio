@@ -17,6 +17,20 @@
       <a href="admin.html">Admin</a>
     </div>
   </div>
+  <form id="loginForm">
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="password" name="password" placeholder="Mot de passe" required>
+  <button type="submit">Connexion</button>
+</form>
+
+<div id="adminSection" style="display:none;">
+  <button id="logoutBtn">Se déconnecter</button>
+  <form id="uploadForm">
+    <input type="file" name="file" accept="image/*,video/*" required>
+    <button type="submit">Uploader</button>
+  </form>
+  <p id="uploadStatus"></p>
+</div>
   <main>
     <section class="admin-panel">
       <h1>Uploader vos contenus</h1>
