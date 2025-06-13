@@ -188,3 +188,56 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(carousel);
 });
 */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, rgba(30,30,30,0.85), rgba(50,50,50,0.85)), url('assets/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.admin-panel {
+  background: rgba(255,255,255,0.05);
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 5em auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.admin-panel h1, .admin-panel h2 {
+  text-align: center;
+}
+
+.admin-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.admin-panel input[type="text"],
+.admin-panel input[type="password"],
+.admin-panel input[type="file"],
+.admin-panel input[type="email"] {
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+}
+
+.admin-panel button {
+  padding: 0.75em;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-panel button:hover {
+  background-color: #0056b3;
+}
+
