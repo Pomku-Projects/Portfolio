@@ -1,0 +1,1 @@
+<?php session_start(); if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) { header('Location: login.php'); exit(); }?><div class='admin-panel'><h1>Bienvenue Admin</h1><form action='upload.php' method='post' enctype='multipart/form-data'><input type='file' name='media' required /><button type='submit'>Uploader</button></form></div>

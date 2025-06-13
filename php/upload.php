@@ -1,10 +1,1 @@
-<?php
-$targetDir = "uploads/";
-$targetFile = $targetDir . basename($_FILES["file"]["name"]);
-
-if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFile)) {
-    echo "Fichier uploadé : " . htmlspecialchars(basename($_FILES["file"]["name"]));
-} else {
-    echo "Erreur lors de l'upload.";
-}
-?>
+<?php session_start(); if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) { header('Location: login.php'); exit(); } if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['media'])) { $target = 'uploads/' . basename($_FILES['media']['name']); move_uploaded_file($_FILES['media']['tmp_name'], $target); echo 'Fichier uploadé avec succès.'; } ?>
