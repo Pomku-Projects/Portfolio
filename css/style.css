@@ -1,12 +1,10 @@
-
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, rgba(30,30,30,0.85), rgba(50,50,50,0.85)), url('assets/bg.jpg') no-repeat center center fixed;
+  background: linear-gradient(to right, rgba(30,30,30,0.85), rgba(50,50,50,0.85)), url('../assets/bg.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
 }
-
 .sidebar {
   width: 240px;
   height: 100vh;
@@ -15,104 +13,47 @@ body {
   backdrop-filter: blur(8px);
   padding: 20px;
   transition: width 0.3s ease;
-  overflow: hidden;
 }
-
 .sidebar.collapsed {
   width: 60px;
 }
-
-.sidebar .menu a {
-  display: block;
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-  transition: opacity 0.3s, transform 0.3s;
-  white-space: nowrap;
-}
-
-.sidebar .menu a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateX(5px);
-  transition: all 0.3s ease;
-}
-
-.sidebar.collapsed .menu a {
-  opacity: 0;
-  transform: translateX(-20px);
-  pointer-events: none;
-}
-
 .toggle-btn {
   background: none;
   color: white;
   font-size: 24px;
   border: none;
   cursor: pointer;
-  margin-bottom: 20px;
 }
-
-.sidebar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 30px;
-  transition: opacity 0.3s, transform 0.3s;
-  opacity: 0;
-  transform: translateY(-10px);
+.menu a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  transition: background 0.3s;
 }
-
-.sidebar.collapsed .logo {
-  opacity: 1;
-  transform: translateY(0);
-  animation: fadeIn 0.5s ease forwards;
-  color: #fff;
-  text-align: center;
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 main {
   margin-left: 260px;
   padding: 20px;
   transition: margin-left 0.3s;
 }
-
 .sidebar.collapsed ~ main {
   margin-left: 80px;
 }
-
 .carousel {
   display: flex;
   gap: 16px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
-.carousel.visible {
-  opacity: 1;
-  transform: translateY(0);
-  animation: rotateProjects 20s linear infinite;
-}
-
-@keyframes rotateProjects {
-  0% { transform: translateY(0) rotateY(0deg); }
-  100% { transform: translateY(0) rotateY(360deg); }
-}
-
 .carousel img {
   height: 200px;
   border-radius: 8px;
-  flex-shrink: 0;
+}
+.admin-panel {
+  background: rgba(255,255,255,0.05);
+  padding: 2em;
+  border-radius: 10px;
 }
